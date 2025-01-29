@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store - Home</title>
+  <link rel="stylesheet" href="bookshop style.css">
+  <style>
+    header{
+      margin-bottom: 0%;
+      float: top;
+    }
+     .icon{
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+<nav>
+  <a href="bookshop home page.html">Home</a>
+  <a href="bookshop login page.html">Login</a>
+  <a href="bookshop cat page.html">Catalogue</a>
+</nav>
+<body>
+  <header>
+    <div><h1>Welcome To Online Book Store </h1></div>
+  </header>
+  <main data-router-wrapper>
+    <section data-router-view="home" class="home">
+      <div class="home-content">
+        <div class="banner">
+          <h1>Your Favorite Books, One Click Away!</h1>
+          <p>Discover new worlds with our curated collection.</p>
+        </div>
+        <div class="featured">
+          <h2>Featured Books</h2>
+          <div class="book">
+            <h3>Dragonfly<br> <br></h3>
+            <img src="book1.jpeg" alt="book" width="200px">
+            <p>Author: Leila Meacham</p>
+          </div>
+          <div class="book">
+            <h3>A KNIGHT IN SHINING ARMOR</h3>
+            <img src="book2.jpeg" alt="book" width="200px">
+            <p>Author: Jude Deveraux</p>
+          </div>
+          <div class="book">
+            <h3>A STRANGER IN THE HOUSE</h3>
+            <img src="book3.jpeg" alt="book" width="200px">
+            <p>Author: Shari Lapena</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Online Book Store</p>
+  </footer>
+  <script src='./js/bookshop home page.js'></script>
+</body>
+</html>

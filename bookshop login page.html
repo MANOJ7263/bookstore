@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-image: url(vecteezy_an-open-book-sitting-on-top-of-a-table-created-with-technology_25373909.jpg);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      color: #333;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 800px;
+      height: 400px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .illustration {
+      flex: 1;
+      background: url("studying-books-and-learning-materials-photo.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    .login-form {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .login-form h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 12px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login-form button:hover {
+      background: #45a049;
+    }
+    .login-form .footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+    .login-form .footer a {
+      color: #2575fc;
+      text-decoration: none;
+    }
+    .login-form .footer a:hover {
+      text-decoration: underline;
+    }
+    .login-form .Remember-mee {
+      text-align: left;
+      display: flex;
+      justify-items: auto;
+    }
+    .login-form .Remember-mee input {
+      margin-bottom: 5px;
+      width: fit-content;
+      margin-right: 2px;
+    }
+    .login-form .Remember-mee label {
+      text-align: inherit;
+      margin-bottom: 5px;
+    }
+    .login-form label {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .login-form button {
+      margin-bottom: 5px;
+    }
+    nav {
+      display: flex;
+      justify-content: right;
+      background-color: #333;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .banner {
+      text-align: center;
+      padding: 50px;
+      background-color: #eaf4fc;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="login-container">
+    <div class="illustration"></div>
+    <div class="login-form">
+      <h2>Login</h2>
+      <form action="#" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div class="Remember-mee">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Remember me</label>
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+      <div class="footer">
+        <a href="#">Forgot your password?</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
