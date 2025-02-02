@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease-in-out;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1e1e1e;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .contact-info a:hover {
+            color: #ffcc00;
+        }
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>MJ's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="section">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Crafting immersive experiences with code and creativity.</p>
+    </section>
+    
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <img src="manojprofile.jpg" alt="MJ's Profile" class="profile-img">
+        <p>Hi, I'm MJ! A passionate developer specializing in web technologies, AI, and machine learning. I love building creative and interactive applications.</p>
+        <p>With expertise in HTML, CSS, JavaScript, Python, and Java, I aim to create seamless digital experiences.</p>
+    </section>
+    
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript, Python, Java, Machine Learning</p>
+    </section>
+    
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Check out some of my cool projects!</p>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <a href="tel:8508056920"><img src="phone-icon.png" alt="Phone"> 8508056920</a>
+            <a href="https://wa.me/8508056920" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"> 8508056920</a>
+            <a href="mailto:snhyonam@gmail.com"><img src="email-icon.png" alt="Email"> snhyonam@gmail.com</a>
+        </div>
+    </section>
+</body>
+</html>
